@@ -2,7 +2,7 @@
 - **RM:** 562117
 - **Turma:** 2CCPG
 - **Curso:** Ciências da Computação
-- **Github:** @Periato
+- **Github:** @Periato e @PedroMCRiato
 
 
 ---
