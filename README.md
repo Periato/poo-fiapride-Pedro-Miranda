@@ -1,0 +1,5 @@
+- **Nome:** Pedro Miranda Campos Riato
+- **RM:** 562117
+- **Turma:** 2CCPG
+- **Curso:** Ciências da Computação
+- **Github:** @Periato
