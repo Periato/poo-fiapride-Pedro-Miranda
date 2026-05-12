@@ -1,6 +1,7 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Animal;
+import br.com.fiapride.model.Recinto;
 
 public class SistemaPrincipal {
 
@@ -29,11 +30,23 @@ public class SistemaPrincipal {
         animal1.setNome("Al"); // Deve cair na nossa regra de < 3 caracteres
         System.out.println("Nome atual: " + animal1.getNome());
         
-        System.out.print("Tentativa de envelhecimento inválido: ");
+        System.out.println("Tentativa de envelhecimento inválido: ");
         animal1.fazerAniversario(-1);
 
-        System.out.print("Tentativa de super-alimentação: ");
+        System.out.println("Tentativa de super-alimentação: ");
         animal1.alimentar(80.0); // 80kg é muito mais que 10% de 150kg
+        
+        // Criando um recinto para apenas 1 animal
+        System.out.println("\n--- Testando construtor ---");
+        Recinto jaulaLeao = new Recinto("Savana", 1);
+
+        // Criando dois animais
+        Animal simba = new Animal("Leão", "Simba", 150.0);
+        Animal scar = new Animal("Leão", "Scar", 140.0);
+
+        // Testando a regra de negócio
+        jaulaLeao.adicionarAnimal(simba); // Deve funcionar
+        jaulaLeao.adicionarAnimal(scar);  // Deve dar erro (Recinto Lotado)
 
         // --- STATUS FINAL (RESUMO) ---
         System.out.println("\n--- Sistema FiapRide: Resumo Final ---");
