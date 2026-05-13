@@ -75,4 +75,8 @@ public class Animal {
 			System.out.println("Erro: a quantidade de comida deve ser maior que zero!");
 		}
 	}
+	
+	public void emitirSom() {
+	    System.out.println(this.nome + " emitiu um som genérico.");
+	}
 }

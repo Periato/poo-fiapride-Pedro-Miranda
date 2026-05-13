@@ -11,4 +11,9 @@ public class Reptil extends Animal {
     public double getTemperaturaCorporal() {
     	return this.temperaturaCorporal; 
     	}
+    
+    @Override
+    public void emitirSom() {
+        System.out.println("O réptil " + getNome() + " está sibilando (fazendo 'hiss')!");
+    }
 }

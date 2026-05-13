@@ -11,4 +11,9 @@ public class Mamifero extends Animal {
     public String getCorPelo() {
     	return this.corPelo; 
     	}
+    
+    @Override
+    public void emitirSom() {
+        System.out.println("O mamífero " + getNome() + " está rugindo ou vocalizando!");
+    }
 }
