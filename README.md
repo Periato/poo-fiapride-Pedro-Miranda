@@ -9,7 +9,7 @@
 
 ## Descrição do projeto
 
-Este projeto é o resultado do aprendizado nas aulas 1-9 de Programação Orientada a Objetos, onde desenvolvemos o sistema **FiapRide** (aplicativo de
+Este projeto é o resultado do aprendizado nas aulas 1-9 de Programação Orientada a Objetos, onde desenvolvemos o sistema **FiapRide** (zoológico)
 
 ## Checklist de Implementação
 
@@ -136,3 +136,49 @@ O Java permite apenas herança simples para evitar ambiguidades e conflitos de c
 ## Desafios Técnicos Implementados
 
 ### Desafio Pessoal (Seu Projeto)
+
+**Qual foi o domínio que você escolheu para seu projeto pessoal?**
+
+Para o meu projeto pessoal, o domínio escolhido foi o de um zoológico.
+
+**Quais classes você criou?**
+
+Animal (Classe Mãe / Abstrata): A base de tudo, contendo atributos como especie, nome e peso, além do método abstrato identificar().
+
+Recinto: Classe que representa o espaço físico, com atributos como bioma e capacidade.
+
+Zoologico: Atua como a classe de Associação, conectando um objeto Animal a um objeto Recinto.
+
+Mamifero (Classe Filha): Especialização de Animal, adicionando o atributo corPelo.
+
+Reptil (Classe Filha): Especialização de Animal, adicionando o atributo temperaturaCorporal.
+
+Ave (Classe Filha): Especialização de Animal, que também implementa a interface de comportamento.
+
+DroneVigilancia: Uma classe que não pertence à hierarquia de animais, mas que compartilha comportamentos através de interface.
+
+Interfaces (Comportamentos)
+Treinavel: Define o "contrato" para qualquer objeto que possa receber comandos, contendo os métodos executarComando() e recompensar().
+
+Classe de Execução
+SistemaPrincipal: Onde realizamos os testes de polimorfismo, herança e o das interfaces utilizando as listas e arrays.
+
+**Qual foi o maior desafio técnico que vocÊ enfrentou?**
+
+O maior desafio técnico foi a transição da estrutura de herança simples para uma arquitetura baseada em classes abstratas e interfaces, garantindo que o sistema permanecesse consistente. Houve uma complexidade inicial ao lidar com a tipagem de referência no Java, especialmente ao tentar verificar se um objeto pertencia a hierarquias distintas usando o operador instanceof. Outro ponto crítico foi implementar o polimorfismo de sobrescrita, onde métodos como identificar() precisavam ser obrigatoriamente definidos nas classes filhas para evitar erros de compilação. A integração de classes de domínios diferentes, como Ave e DroneVigilancia, sob a mesma interface Treinavel, exigiu um entendimento profundo sobre como desacoplar comportamentos de categorias biológicas. Por fim, ajustar o SistemaPrincipal para acessar métodos específicos de cada subclasse sem perder a flexibilidade do uso de listas genéricas demandou um controle rigoroso sobre os tipos de variáveis declaradas. Esse processo foi essencial para garantir a segurança e a extensibilidade do código. Em resumo, a transição de estrutura simples para classes abstratas e interfaces; uso do instanceof; polimorfismo de sobrescrita; e integração de classes de domínios diferentes.
+
+---
+
+## Conclusão
+
+**O que você aprendeu nestas 9 aulas?**
+
+Aprendi a estruturar um sistema de Programação Orientada a Objetos em Java, com um aprendizado constante ao longo de 9 aulas. O projeto começou simples, mas foi evoluindo, tendo passado por diversos temas, como Associação, Herança, Polimorfismo e Interfaces. Aprendi conceitos básicos de POO, e também a dar commits no GitHub.
+
+**Qual conceito foi mais difícil de entender?**
+
+O conceito mais difícil de entender foi Interfaces, pois foi difícil pensar em objetos que utilizassem a mesma interface, mas não se enquadrassem na mesma classe mãe, que era Animal. Para superar essa dificuldade, estudei novamente a aula pelo material disponibilizado pelo professor, e utilizei a criatividade para pensar em bons objetos.
+
+**O que você melhoraria no seu projeto seu pudesse refazer?**
+
+Deixaria o código mais simples; buscaria melhorá-lo a cada aula, e não somente ir adicionando novas funcionalidades.
