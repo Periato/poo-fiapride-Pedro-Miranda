@@ -16,4 +16,8 @@ public class Reptil extends Animal {
     public void emitirSom() {
         System.out.println("O réptil " + getNome() + " está sibilando (fazendo 'hiss')!");
     }
+    @Override
+    public void identificar() {
+        System.out.println("Sou um Reptil: " + getNome());
+    }
 }

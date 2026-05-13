@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Animal {
+public abstract class Animal {
 	private String especie;
 	private String nome;
 	private double peso;
@@ -79,4 +79,8 @@ public class Animal {
 	public void emitirSom() {
 	    System.out.println(this.nome + " emitiu um som genérico.");
 	}
+	
+	// Método Abstrato: Define O QUE fazer, mas não COMO.
+    // Cada filho SERÁ OBRIGADO a implementar sua versão.
+    public abstract void identificar();
 }

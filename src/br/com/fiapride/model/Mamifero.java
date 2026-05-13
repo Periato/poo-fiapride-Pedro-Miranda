@@ -16,4 +16,8 @@ public class Mamifero extends Animal {
     public void emitirSom() {
         System.out.println("O mamífero " + getNome() + " está rugindo ou vocalizando!");
     }
+    @Override
+    public void identificar() {
+        System.out.println("Sou um Mamifero: " + getNome());
+    }
 }

@@ -8,25 +8,25 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
         
-        // Criando os objetos específicos
-        Mamifero animal1 = new Mamifero("Leão", "Simba", 180.0, "Dourado");
-        Reptil animal2 = new Reptil("Cobra", "Kaa", 15.0, 28.0);
-        Mamifero animal3 = new Mamifero("Cachorro", "Rex", 20.0, "Caramelo");
 
-        // PASSO: Criar uma List tipada com a Superclasse
-        List<Animal> listaAnimais = new ArrayList<>();
+        // --- TESTE DE FUNCIONAMENTO ---
+        List<Animal> zoo = new ArrayList<>();
         
-        // Adicionando objetos de tipos diferentes na mesma lista
-        listaAnimais.add(animal1);
-        listaAnimais.add(animal2);
-        listaAnimais.add(animal3);
+        zoo.add(new Mamifero("Leão", "Simba", 180.0, "Dourado"));
+        zoo.add(new Reptil("Cobra", "Kaa", 15.0, 30.0));
+        zoo.add(new Mamifero("Cachorro", "Rex", 20.0, "Caramelo"));
 
-        System.out.println("--- Teste de Polimorfismo: O Coro do Zoo ---");
+        System.out.println("=== FIAPRIDE: Teste de Classes Abstratas ===");
+        
+        for (Animal animal : zoo) {
+            // Chamando o método abstrato implementado nas filhas
+            animal.identificar();
+        }
 
-        // PASSO: Laço for chamando o mesmo método para todos
-        for (Animal a : listaAnimais) {
-            // O comando é o mesmo (.emitirSom), mas o resultado varia!
-            a.emitirSom();
+        System.out.println("\n=== Polimorfismo com Classe Abstrata ===");
+        for (Animal animal : zoo) {
+            animal.identificar();
+            System.out.println("---");
         }
     }
 }
